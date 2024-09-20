@@ -1,0 +1,77 @@
+header {
+  width: 100vw;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 4rem;
+  background-color: var(--section-background);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 4rem;
+}
+
+.brand-logo {
+  width: 10.5rem;
+  line-height: 1.7rem;
+  margin-right: 5rem;
+}
+
+.nav-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 3.5rem 5rem;
+  border-bottom: 0.1rem solid rgba(108, 107, 107, 0.48);
+  background-color: #fff;
+}
+
+.nav-container ul {
+  display: flex;
+}
+
+.nav-container .right {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.nav-container .left {
+  display: flex;
+  flex-grow: 1;
+}
+
+.nav-container .guide-list li {
+  padding-right: 1.5rem;
+}
+
+.nav-container li:hover {
+  color: var(--section-background);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.nav-container .guide-list li span {
+  font-size: 1.3rem;
+}
+
+.nav-container .icon-list {
+  display: flex;
+  justify-content: right;
+}
+
+.nav-container .icon-list li {
+  margin-left: 3.5rem;
+}

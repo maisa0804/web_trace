@@ -1,17 +1,167 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>【FUDGE.jp】～大人女子のファッション＆スナップ＆カルチャーWebマガジン～</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      coca [Official online store] An online shopping site that delivers items
+      for women, men, and kids at the best prices
+    </title>
 
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/sections/header.css" />
+    <link rel="stylesheet" href="css/sections/hero.css" />
+    <link rel="stylesheet" href="css/sections/banners.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="banner">
+        <p>
+          Flat shipping fee of 199 yen! Free shipping for orders over 3,980 yen
+        </p>
+      </div>
+      <nav>
+        <div class="nav-container">
+          <div class="right">
+            <img
+              src="./assets/images/logo.png"
+              alt="brand logo"
+              class="brand-logo"
+            />
+            <ul class="guide-list">
+              <li>
+                <span>WOMEN</span>
+                <span>
+                  <img src="./assets/icons/arrow.svg" alt="My Arrow SVG" />
+                </span>
+              </li>
+              <li>
+                <span>MEN</span>
+                <span>
+                  <img src="./assets/icons/arrow.svg" alt="My Arrow SVG" />
+                </span>
+              </li>
+              <li>
+                <span>KIDS</span>
+                <span>
+                  <img src="./assets/icons/arrow.svg" alt="My Arrow SVG" />
+                </span>
+              </li>
+              <li><span>SNAP</span></li>
+              <li><span>LIVE</span></li>
+              <li><span>RANKING</span></li>
+              <li><span>GUIDE</span></li>
+              <li><span>Q&A</span></li>
+              <li><span>SHOPS</span></li>
+            </ul>
+          </div>
+          <ul class="icon-list left">
+            <li>
+              <span>
+                <img
+                  src="./assets/icons/search.svg"
+                  alt="search"
+                  class="nav-icon"
+                />
+              </span>
+            </li>
+            <li>
+              <span>
+                <img
+                  src="./assets/icons/translation.svg"
+                  alt="search"
+                  class="nav-icon"
+                  ß
+                />
+              </span>
+            </li>
+            <li>
+              <span>
+                <img
+                  src="./assets/icons/heart.svg"
+                  alt="search"
+                  class="nav-icon"
+                />
+              </span>
+            </li>
+            <li>
+              <span>
+                <img
+                  src="./assets/icons/human.svg"
+                  alt="search"
+                  class="nav-icon"
+                />
+              </span>
+            </li>
+            <li>
+              <span>
+                <img
+                  src="./assets/icons/search.svg"
+                  alt="search"
+                  class="nav-icon"
+                />
+              </span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero -->
+    <main>
+      <section class="main-top-image">
+        <div class="main-top-image-container">
+          <div class="main-top-image-item">
+            <img src="./assets/images/main-image.jpg" alt="main visual" />
+            <div class="main-top-image-scroll-button">
+              <span class="scroll-trigger-button"></span>
+              <span class="scroll-trigger-button"></span>
+              <span class="scroll-trigger-button"></span>
+              <span class="scroll-trigger-button"></span>
+            </div>
+          </div>
+        </div>
+        <div class="news">
+          <h3 class="news-content-top left">NEWS</h3>
+          <p class="news-content-bottom">
+            ブランド「comcoca」に関しまして(2024.08.02)
+          </p>
+          <p class="news-content-top right scroll-bar">
+            <button>
+              <img src="/assets/icons/arrow-to-left.svg" alt="my icon arrow" />
+            </button>
+            <span>1</span>
+            <span>/</span>
+            <span>3</span>
+            <button>
+              <img
+                src="./assets/icons/arrow-to-righr.svg"
+                alt="my icon arrow"
+              />
+            </button>
+          </p>
+        </div>
+      </section>
+      <section id="main-banners" class="main-banners">
 
-</head>
-<body>
-  
 
-  <script src="js/index.js" defer></script>
-</body>
+        <!--banner template -->
+        <template id="banner-temp">
+          <div class="banner">
+            <img src="" alt="banner image" class="banner-img">
+            <h3 class="banner-title"></h3>
+            <p class="banner-description"></p>
+          </div>
+        </template>
+      </section>
+    
+    
+    
+    </main>
+
+    <script src="js/index.js" defer></script>
+    <script type="module" src="js/componts/banner.js"></script>
+    <script type="module" src="js/static/banner_data.js"></script>
+  </body>
 </html>

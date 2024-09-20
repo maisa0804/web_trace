@@ -1,0 +1,21 @@
+.main-banners {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  grid-area: area1;
+}
+
+.banner img {
+  display: block;
+  max-width: 28.6rem;
+}
+
+.banner h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 2.7rem;
+}

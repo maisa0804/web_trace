@@ -1,0 +1,39 @@
+:root {
+  /* Color */
+  --button-background: #cf2929;
+  --button-background-secondary: #0f6aff;
+  --section-background: #dedede;
+
+
+  /* Font Family */
+  font-family: sans-serif;
+
+
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+
+p {
+  font-size: 1.2rem;
+}
+
+
+/* 1000px未満 (SP用) */
+@media (max-width: 767px) {
+
+}
+
+/* 1000pxから1290px */
+@media (min-width: 768px) and (max-width: 1279px) {
+  
+}
+
+/* 1290px以上のスタイル  */
+@media (min-width: 1290px) {
+
+
+  
+}
