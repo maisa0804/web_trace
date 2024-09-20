@@ -31,8 +31,6 @@
   letter-spacing: .1rem;
 }
 
-
-
 /* 1000px未満 (SP用) */
 @media (max-width: 767px) {
   .main-banners {
