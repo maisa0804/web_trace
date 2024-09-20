@@ -1,21 +1,61 @@
 .main-banners {
-  display: flex;
-  flex-wrap: wrap;
+  width: 100vw;
+  padding: 5rem 8rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 3rem;
+  background-color: var(--section-background);
+  margin-bottom: 5rem;
 }
 
-.banner {
+.banner-item {
+  max-width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  grid-area: area1;
 }
 
-.banner img {
-  display: block;
-  max-width: 28.6rem;
+.banner-item img {
+  object-fit: cover;
+  max-width: 100%;
 }
 
-.banner h3 {
-  font-size: 1.3rem;
-  font-weight: 400;
+.banner-item h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
   line-height: 2.7rem;
+  margin-top: 2rem;
+  color: #676767;
+  letter-spacing: .1rem;
 }
+
+
+
+/* 1000px未満 (SP用) */
+@media (max-width: 767px) {
+  .main-banners {
+    padding: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3fr;
+    grid-row-gap: 4rem;
+    grid-column-gap: 2rem;
+    background-color: var(--section-background);
+  }
+}
+
+/* 1000pxから1290px */
+@media (min-width: 768px) and (max-width: 1025px) {
+
+  .main-banners {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr;
+    grid-row-gap: 4rem;
+    grid-column-gap: 2rem;
+    background-color: var(--section-background);
+  }
+}
+
+/* 1290px以上のスタイル  */
+@media (min-width: 1025px) {}
