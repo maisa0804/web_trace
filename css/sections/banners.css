@@ -31,8 +31,6 @@
   letter-spacing: .1rem;
 }
 
-
-
 /* 1000px未満 (SP用) */
 @media (max-width: 767px) {
   .main-banners {
@@ -47,7 +45,6 @@
 
 /* 1000pxから1290px */
 @media (min-width: 768px) and (max-width: 1025px) {
-
   .main-banners {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 2fr;
@@ -56,6 +53,3 @@
     background-color: var(--section-background);
   }
 }
-
-/* 1290px以上のスタイル  */
-@media (min-width: 1025px) {}
