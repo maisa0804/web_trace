@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="css/sections/header.css" />
     <link rel="stylesheet" href="css/sections/hero.css" />
     <link rel="stylesheet" href="css/sections/banners.css" />
+    <link rel="stylesheet" href="css/components/category.css" />
+    <link rel="stylesheet" href="css/components/product-card.css" />
+
   </head>
   <body>
     <!-- Header -->
@@ -118,7 +121,6 @@
     <!-- Hero -->
     <main>
       <section class="main-top-image">
-        <div class="main-top-image-container">
           <div class="main-top-image-item">
             <img src="./assets/images/main-image.jpg" alt="main visual" />
             <div class="main-top-image-scroll-button">
@@ -127,7 +129,6 @@
               <span class="scroll-trigger-button"></span>
               <span class="scroll-trigger-button"></span>
             </div>
-          </div>
         </div>
         <div class="news">
           <h3 class="news-content-top left">NEWS</h3>
@@ -160,25 +161,49 @@
           </div>
         </template>
       </section>
-      <section id="category" class="category women">
 
-      </section>
-      <section id="category" class="category kids">
+      <template id="product-card">
+        <div id="product-card">
+          <div>
+            <img src="" alt="category card produc image">
+            <span>ハート</span>
+          </div>
+          <p class="product-title"></p>
+          <p>
+            <span>￥</span>
+            <span class="product-price"></span>
+            <span>(税込)</span>
+          </p>
+        </div>
+      </template>
 
-      </section>
-      <section id="category" class="category men">
+      <template id="category-template">
+        <div  id="category-container" class="category-container">
+          <div>
+            <h2 class="category-title"></hÒ2>
+            <div class="link-to-list">
+              <span>see the list</span>
+              <span>>>>>></span>
+            </div>
+          </div>
+          <div id="product-list"></div>
+        </div>
+      </template>
 
-      </section>
-      <section id="category" class="category ranking">
-
-      </section>
-      <section id="category" class="category pickup">
-
-      </section>
-
+      <section id="category" class="category women"></section>
+      <section id="category" class="category kids"></section>
+      <section id="category" class="category men"></section>
+      <section id="category" class="category ranking"></section>
+      <section id="category" class="category pickup"></section>
+      <section class="advertisement"></section>
     </main>
+    
+    <footer></footer>
+    
     <script src="js/index.js" defer></script>
     <script type="module" src="js/componts/banner.js"></script>
     <script type="module" src="js/static/banner_data.js"></script>
+    <script type="module" src="js/componts/category-container.js"></script>
+    <script type="module" src="js/componts/-card.js"></script>
   </body>
 </html>

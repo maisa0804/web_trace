@@ -1,20 +1,20 @@
 header {
-  width: 100vw;
+  width: 100%;
 }
 
 .banner {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  width: 100%;
   line-height: 4rem;
   background-color: var(--section-background);
 }
 
 nav {
   position: fixed;
+  top: 4rem;
   width: 100%;
-  top: 4rem
 }
 
 .brand-logo {
@@ -29,6 +29,7 @@ nav {
 }
 
 .nav-container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
