@@ -41,11 +41,8 @@
 
 .product-price::before {
   content: "¥";
-  /* 税込という文字を追加 */
   font-size: 1.3rem;
-  /* フォントサイズを小さめに設定 */
   font-weight: 600;
-  /* 文字色をグレーに設定 */
 }
 
 .product-price::after {
