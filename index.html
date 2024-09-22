@@ -14,6 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/reset.css" />
@@ -22,7 +28,6 @@
     <link rel="stylesheet" href="css/sections/banners.css" />
     <link rel="stylesheet" href="css/components/category.css" />
     <link rel="stylesheet" href="css/components/product-card.css" />
-
   </head>
   <body>
     <!-- Header -->
@@ -121,14 +126,14 @@
     <!-- Hero -->
     <main>
       <section class="main-top-image">
-          <div class="main-top-image-item">
-            <img src="./assets/images/main-image.jpg" alt="main visual" />
-            <div class="main-top-image-scroll-button">
-              <span class="scroll-trigger-button"></span>
-              <span class="scroll-trigger-button"></span>
-              <span class="scroll-trigger-button"></span>
-              <span class="scroll-trigger-button"></span>
-            </div>
+        <div class="main-top-image-item">
+          <img src="./assets/images/main-image.jpg" alt="main visual" />
+          <div class="main-top-image-scroll-button">
+            <span class="scroll-trigger-button"></span>
+            <span class="scroll-trigger-button"></span>
+            <span class="scroll-trigger-button"></span>
+            <span class="scroll-trigger-button"></span>
+          </div>
         </div>
         <div class="news">
           <h3 class="news-content-top left">NEWS</h3>
@@ -161,46 +166,45 @@
           </div>
         </template>
       </section>
-      
+
+      <!-- Peoduct category template -->
+      <template id="category-template">
+        <div id="category-container" class="category-container">
+          <div class="category-top">
+            <h2 class="category-title"></h2>
+            <div class="link-to-list">
+              <span>一覧を見る</span>
+              <span class="link-arrow"><img class="arrow-icon" src="./assets/icons/arrow-to-righr.svg" alt="arrow svg icon"></span>
+            </div>
+          </div>
+          <div id="product-list" class="product-list"></div>
+        </div>
+      </template>
+
       <!-- Peoduct card template -->
       <template id="product-card">
         <div id="product-card-container">
-          <div>
-            <img src="" class="product-image" alt="category card produc image">
-            <span>ハート</span>
+          <div class="image-container">
+            <img
+              src=""
+              class="product-image"
+              alt="category card produc image"
+            />
+            <span class="fav-icon"><img src="./assets/icons/heart.svg" alt="Good heart" /></span>
           </div>
           <p class="product-title"></p>
           <p>
-            <span>￥</span>
-            <span class="product-price"></span>
-            <span>(税込)</span>
+            <p class="product-price"></p>
           </p>
         </div>
       </template>
 
-      <template id="category-template">
-        <div  id="category-container" class="category-container">
-          <div>
-            <h2 class="category-title"></hÒ2>
-            <div class="link-to-list">
-              <span>see the list</span>
-              <span>>>>>></span>
-            </div>
-          </div>
-          <div id="product-list"></div>
-        </div>
-      </template>
-
-      <section id="category-women" class="category women"></section>
-      <section id="category-kids" class="category kids"></section>
-      <section id="category-men" class="category men"></section>
-      <section id="category-ranking" class="category ranking"></section>
-      <section id="category-pickup" class="category pickup"></section>
-      <section class="advertisement"></section>
+      <section id="categories"></section>
+      ß
     </main>
-    
+
     <footer></footer>
-    
+
     <script src="js/index.js" defer></script>
     <script type="module" src="js/components/banner.js"></script>
     <script type="module" src="js/static/banner_data.js"></script>
@@ -210,6 +214,5 @@
     <script type="module" src="js/static/product_women_data.js"></script>
     <script type="module" src="js/static/product_kids_data.js"></script>
     <script type="module" src="js/static/product_men_data.js"></script>
-
   </body>
 </html>

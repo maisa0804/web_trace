@@ -1,0 +1,56 @@
+#product-card-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  height: auto;
+  padding: 0 1.3rem;
+}
+
+#product-card-container .image-container {
+  position: relative;
+}
+
+#product-card-container img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+#product-card-container span {
+  display: inline-block;
+  position: absolute;
+  padding: .8rem;
+  bottom: 1rem;
+  right: 0.8rem;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.product-price::before {
+  content: "¥";
+  /* 税込という文字を追加 */
+  font-size: 1.3rem;
+  /* フォントサイズを小さめに設定 */
+  font-weight: 600;
+  /* 文字色をグレーに設定 */
+}
+
+.product-price::after {
+  content: " (税込)";
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: gray;
+}
