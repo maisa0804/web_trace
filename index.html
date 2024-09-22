@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/components/category.css" />
     <link rel="stylesheet" href="css/components/product-card.css" />
     <link rel="stylesheet" href="css/components/ranking-card.css" />
+    <link rel="stylesheet" href="css/sections/instagram.css" />
   </head>
   <body>
     <!-- Header -->
@@ -202,7 +203,6 @@
           <p class="product-price"></p>
         </div>
       </template>
-
       <!-- Ranking card template -->
       <template id="ranking-card">
         <div id="ranking-card-container">
@@ -215,6 +215,14 @@
           </div>
           <p class="ranking-title"></p>
           <p class="ranking-price"></p>
+        </div>
+      </template>
+      <!-- Instagram card template -->
+      <template id="instagram-card">
+        <div id="instagram-card-container">
+          <div class="image-container">
+            <img src="" class="article-image" alt="instagram card produc image" />
+            <p class="description"></p>
         </div>
       </template>
 
@@ -237,6 +245,14 @@
         </div>
       </section>
       <section id="sales"></section>
+
+      <section id="instagram">
+        <div class="instagram-title">
+          <h2>Instagram</h2>
+          <p>記事一覧はこちら</p>
+        </div>
+        <div id="instagram-articles"></div>
+      </section>
     </main>
 
     <footer></footer>
@@ -246,6 +262,7 @@
     <script type="module" src="js/static/banner_data.js"></script>
     <script type="module" src="js/components/product-card.js"></script>
     <script type="module" src="js/components/ranking-card.js"></script>
+    <script type="module" src="js/components/instagram-card.js"></script>
 
     <script type="module" src="js/static/product_women_data.js"></script>
     <script type="module" src="js/static/product_kids_data.js"></script>
@@ -253,5 +270,6 @@
     <script type="module" src="js/static/product_restock_data.js"></script>
     <script type="module" src="js/static/ranking_data.js"></script>
     <script type="module" src="js/static/sales_data.js"></script>
+    <script type="module" src="js/static/instagram_data.js"></script>
   </body>
 </html>
