@@ -1,5 +1,6 @@
 .category-container {
   width: 100%;
+  border-bottom: solid gray 0.5px;
 }
 
 .category-top {
@@ -52,7 +53,6 @@
 
 .link-arrow:hover img {
   background-color: #fff;
-
 }
 
 .category-container h2 {
@@ -63,33 +63,17 @@
   margin-bottom: 1.8rem;
 }
 
-
-
-
-
-
-/* .product-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* margin-left: calc(((100vw - 100%) / 2) * -1);
-  margin-right: calc(((100vw - 100%) / 2) * -1);  */
-
 @media (max-width: 767px) {
   .category-container {
     padding: 2rem;
   }
 
-
   .product-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-
-
 }
 
-/* 1000pxから1290px */
 @media (min-width: 768px) {
   .category-container {
     padding: 8rem;

@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/sections/banners.css" />
     <link rel="stylesheet" href="css/components/category.css" />
     <link rel="stylesheet" href="css/components/product-card.css" />
+    <link rel="stylesheet" href="css/components/ranking-card.css" />
   </head>
   <body>
     <!-- Header -->
@@ -166,7 +167,6 @@
           </div>
         </template>
       </section>
-
       <!-- Peoduct category template -->
       <template id="category-template">
         <div id="category-container" class="category-container">
@@ -174,13 +174,17 @@
             <h2 class="category-title"></h2>
             <div class="link-to-list">
               <span>一覧を見る</span>
-              <span class="link-arrow"><img class="arrow-icon" src="./assets/icons/arrow-to-righr.svg" alt="arrow svg icon"></span>
+              <span class="link-arrow"
+                ><img
+                  class="arrow-icon"
+                  src="./assets/icons/arrow-to-righr.svg"
+                  alt="arrow svg icon"
+              /></span>
             </div>
           </div>
           <div id="product-list" class="product-list"></div>
         </div>
       </template>
-
       <!-- Peoduct card template -->
       <template id="product-card">
         <div id="product-card-container">
@@ -190,17 +194,49 @@
               class="product-image"
               alt="category card produc image"
             />
-            <span class="fav-icon"><img src="./assets/icons/heart.svg" alt="Good heart" /></span>
+            <span class="fav-icon"
+              ><img src="./assets/icons/heart.svg" alt="Good heart"
+            /></span>
           </div>
           <p class="product-title"></p>
-          <p>
-            <p class="product-price"></p>
-          </p>
+          <p class="product-price"></p>
+        </div>
+      </template>
+
+      <!-- Ranking card template -->
+      <template id="ranking-card">
+        <div id="ranking-card-container">
+          <div class="image-container">
+            <span class="rank-number"></span>
+            <img src="" class="ranking-image" alt="ranking card produc image" />
+            <span class="fav-icon"
+              ><img src="./assets/icons/heart.svg" alt="Good heart"
+            /></span>
+          </div>
+          <p class="ranking-title"></p>
+          <p class="ranking-price"></p>
         </div>
       </template>
 
       <section id="categories"></section>
-      ß
+      <section id="ranking">
+        <div>
+          <div class="category-top">
+            <h2 class="category-title">Ranking</h2>
+            <div class="link-to-list">
+              <span>一覧を見る</span>
+              <span class="link-arrow"
+                ><img
+                  class="arrow-icon"
+                  src="./assets/icons/arrow-to-righr.svg"
+                  alt="arrow svg icon"
+              /></span>
+            </div>
+          </div>
+          <div id="ranking-list"></div>
+        </div>
+      </section>
+      <section id="sales"></section>
     </main>
 
     <footer></footer>
@@ -208,11 +244,14 @@
     <script src="js/index.js" defer></script>
     <script type="module" src="js/components/banner.js"></script>
     <script type="module" src="js/static/banner_data.js"></script>
-    <script type="module" src="js/components/category-container.js"></script>
     <script type="module" src="js/components/product-card.js"></script>
+    <script type="module" src="js/components/ranking-card.js"></script>
 
     <script type="module" src="js/static/product_women_data.js"></script>
     <script type="module" src="js/static/product_kids_data.js"></script>
     <script type="module" src="js/static/product_men_data.js"></script>
+    <script type="module" src="js/static/product_restock_data.js"></script>
+    <script type="module" src="js/static/ranking_data.js"></script>
+    <script type="module" src="js/static/sales_data.js"></script>
   </body>
 </html>
