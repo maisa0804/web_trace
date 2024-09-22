@@ -4,54 +4,42 @@ import productKidsData from "../static/product_kids_data.js";
 
 const productCardTemplate = document.getElementById("product-card").content;
 const cardContainer = (categoryId) => document.getElementById(categoryId);
+const categoryContainer = document.getElementById("categories");
 
-const createProductCard = (img, title, price, categoryId) => {
+const categoryTemplate = document.getElementById("category-template").content;
+
+const createProductCard = (img, title, price) => {
   const card = productCardTemplate.cloneNode(true);
   card.querySelector(".product-image").src = img;
   card.querySelector(".product-title").textContent = title;
   card.querySelector(".product-price").textContent = price;
 
-  const container = cardContainer(categoryId);
-  container.appendChild(card);
+  return card
 };
 
-const addCardsToCategory = (categoryId) => {
-  switch (categoryId) {
-    case "category-women":
-      for (let i = 0; i < productWomenData.length; i++) {
-        createProductCard(
-          productWomenData[i].img,
-          productWomenData[i].title,
-          productWomenData[i].price,
-          categoryId
-        );
-      }
-      break;
-    case "category-kids":
-      for (let i = 0; i < productKidsData.length; i++) {
-        createProductCard(
-          productKidsData[i].img,
-          productKidsData[i].title,
-          productKidsData[i].price,
-          categoryId
-        );
-      }
-      break;
-    case "category-men":
-      for (let i = 0; i < productMensData.length; i++) {
-        createProductCard(
-          productMensData[i].img,
-          productMensData[i].title,
-          productMensData[i].price,
-          categoryId
-        );
-      }
-      break;
-    default:
-      break;
-  }
+const addCardsToCategory = (products, categoryId) => {
+
+  const categoryElement = document.getElementById(categoryId); 
+  const productList = categoryElement.querySelector("#product-list")
+
+  products.forEach((product) => {
+    const productCard = createProductCard(product.img, product.title, product.price);
+    productList.appendChild(productCard);
+  });
 };
 
-addCardsToCategory("category-women")
-addCardsToCategory("category-kids")
-addCardsToCategory("category-men")
+const createCategory = (categoryTitle, categoryId) => {
+  const category = categoryTemplate.cloneNode(true);
+  category.querySelector(".category-title").textContent = categoryTitle;
+  category.querySelector("#category-container").id = categoryId; 
+
+  categoryContainer.appendChild(category);
+};
+
+createCategory("Women's Products", "category-women");
+createCategory("Kids' Products", "category-kids");
+createCategory("Men's Products", "category-men");
+
+addCardsToCategory(productWomenData, "category-women");
+addCardsToCategory(productKidsData, "category-kids");
+addCardsToCategory(productMensData, "category-men");
