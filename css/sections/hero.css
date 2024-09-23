@@ -1,5 +1,5 @@
 .main-top-image {
-  margin: 14rem 0 4rem 0;
+  margin: 9.6rem 0 4rem 0;
   max-width: 100vw;
 }
 
@@ -82,5 +82,11 @@
     order: 2;
     width: 100%;
     line-height: 2.4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-top-image {
+    margin: 0;
   }
 }
