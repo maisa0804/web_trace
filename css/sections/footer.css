@@ -1,0 +1,160 @@
+footer {
+  background-color: var(--footer-background);
+  width: 100%;
+  padding: 6rem 8rem;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.pick-language span {
+  margin-right: 2rem;
+  color: #fff;
+}
+
+.pick-language {
+  position: relative;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.left-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.right-container {
+  grid-area: 1 / 3 / 2 / 6;
+}
+
+.icons {
+  display: flex;
+  align-items: start;
+  grid-area: 1 / 1 / 2 / 3;
+  height: 50%;
+}
+
+.icons span:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.title-list {
+  grid-area: 2 / 1 / 4 / 3;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.title-list li {
+  line-height: 3.8rem;
+}
+
+.item-list {
+  grid-area: 2 / 3 / 4 / 6;
+  font-size: 1.2rem;
+}
+
+.item-list li {
+  line-height: 3.8rem;
+}
+
+.icons img {
+  line-height: 2.5rem;
+}
+
+.footer-credit {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.footer-credit p {
+  grid-area: 1 / 1 / 2 / 3;
+  display: block;
+  font-size: 1rem;
+}
+
+.footer-credit ul {
+  display: flex;
+  grid-area: 1 / 3 / 2 / 6;
+}
+
+.newsletter-title-container {
+  justify-content: flex-end;
+  margin-bottom: 7.7rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+
+}
+
+.newsletter-title-container>.title {
+  display: flex;
+}
+
+.newsletter-title-container>.title p {
+  padding-left: 3.3rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.right-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #3b3b3b;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #767676;
+  font-size: 1.2rem;
+  padding: 1.5rem 3.5rem;
+}
+
+.newsletter-title-container h3 {
+  font-size: 2.6rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  line-height: 3.1rem;
+}
+
+.newsletter-title-container p {
+  font-size: 1rem;
+  letter-spacing: 0.5re;
+  line-height: 3.1rem;
+}
+
+
+@media (max-width: 1000px) {
+  footer {
+    padding: 4.4rem 2rem;
+  }
+
+  .pick-language {
+    margin-bottom: 2rem;
+  }
+
+  .newsletter-title-container {
+    margin-bottom: 7.7rem;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-container {
+    order: 1;
+  }
+
+  .left-container {
+    order: 2;
+  }
+}
