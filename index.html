@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/components/product-card.css" />
     <link rel="stylesheet" href="css/components/ranking-card.css" />
     <link rel="stylesheet" href="css/sections/instagram.css" />
+    <link rel="stylesheet" href="css/sections/footer.css" />
   </head>
   <body>
     <!-- Header -->
@@ -219,10 +220,9 @@
       </template>
       <!-- Instagram card template -->
       <template id="instagram-card">
-        <div id="instagram-card-container">
-          <div class="image-container">
-            <img src="" class="article-image" alt="instagram card produc image" />
-            <p class="description"></p>
+        <div class="instagram-image-container">
+          <img src="" class="article-image" alt="instagram card produc image" />
+          <p class="description"></p>
         </div>
       </template>
 
@@ -245,7 +245,6 @@
         </div>
       </section>
       <section id="sales"></section>
-
       <section id="instagram">
         <div class="instagram-title">
           <h2>Instagram</h2>
@@ -253,9 +252,70 @@
         </div>
         <div id="instagram-articles"></div>
       </section>
+      <section></section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="pick-language">
+        <span>Language</span>
+        <select name="language" id="language">
+          <option value="cny">CNY ￥</option>
+          <option value="hkd">HKD $</option>
+          <option value="jpy">JPY ￥</option>
+          <option value="MOP">MOP P</option>
+          <option value="thb">THB ฿</option>
+          <option value="twd">TWD $</option>
+          <option value="vnd">VND ₫</option>
+        </select>
+      </div>
+      <div class="footer-container">
+        <div class="left-container">
+          <div class="icons">
+            <div>
+              <span
+                ><img src="./assets/icons/instagram.svg" alt="instagram icon"
+              /></span>
+              <span><img src="./assets/icons/line.svg" alt="LINE icon" /></span>
+            </div>
+          </div>
+          <ul class="title-list">
+            <li>ご利用案内</li>
+            <li>よくある質問</li>
+            <li>お問い合わせ</li>
+            <li>採用情報</li>
+          </ul>
+          <ul class="item-list">
+            <li>会社概要</li>
+            <li>社会活動</li>
+            <li>個人情報の取り扱いについて</li>
+            <li>特定商取引法に関する表示</li>
+            <li>外部送信ツールに関する公表事項</li>
+          </ul>
+        </div>
+        <div class="right-container">
+          <div class="newsletter-title-container">
+            <div class="title">
+              <h3>News letter</h3>
+              <p>外部送信ツールに関する公表事項</p>
+            </div>
+            <input type="text" placeholder="メールアドレスを登録"/>
+          </div>
+          <div class="footer-credit">
+            <p>COPYRIGHT ADAPT RETAILING CO., LTD. ALL RIGHTS RESERVED.</p>
+            <ul class="credit-list">
+              <li>Amazon</li>
+              <li>Amex</li>
+              <li>Apple</li>
+              <li>Google</li>
+              <li>JCB</li>
+              <li>Master Card</li>
+              <li>Paypal</li>
+              <li>Visa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="js/index.js" defer></script>
     <script type="module" src="js/components/banner.js"></script>

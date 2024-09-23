@@ -11,23 +11,51 @@
   margin-bottom: 1.8rem;
 }
 
+.instagram-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #instagram .description {
   font-size: 1.6rem;
 }
 
-#instagram-articles {
-  display: flex;
-}
-
-#instagram-card-container {
+.instagram-image-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-#instagram-card-container img {
-  width: 100%;
-  aspect-ratio: 1;
+.instagram-image-container p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.instagram-image-container img {
+  max-width: 100%;
   object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.instagram-image-container::after {
+  content: "●LIVE";
+  position: absolute;
+  font-size: 0.8rem;
+  display: inline;
+  width: 6.5rem;
+  padding: 0.6rem;
+  text-align: center;
+  color: #fff;
+  background-color: brown;
+  bottom: 9rem;
+  left: 0.5rem;
+  border-radius: 25px;
+  letter-spacing: 0.3rem;
+  background: linear-gradient(to right, #ab2986,#ea794a);
 }
 
 @media (max-width: 767px) {
@@ -42,7 +70,6 @@
   }
 }
 
-
 @media (min-width: 768px) {
   #instagram-articles {
     display: flex;
@@ -52,12 +79,4 @@
     margin-left: calc(((140vw - 100%) / 2) * -1);
     margin-right: calc(((140vw - 100%) / 2) * -1);
   }
-
-  #instagram-card-container img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    flex: 1 1 100%;
-  }
-
 }

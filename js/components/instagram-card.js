@@ -1,11 +1,11 @@
 const instagramData = [
   {
     img: "../../assets/images/instagram/instagram1.jpg",
-    description: "【IGTV】9/18 ロングリブニットスカート会",
+    description: "【IGTV】9/18 3夜連続インスタライブ!ロングリブニットスカート会",
   },
   {
     img: "../../assets/images/instagram/instagram2.jpg",
-    description: "Can be rolled up and carried",
+    description: "IGTV】8/9 3夜連続インスタライブ!Can be rolled up and carried",
   },
   {
     img: "../../assets/images/instagram/instagram3.jpg",
