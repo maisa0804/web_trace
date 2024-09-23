@@ -1,3 +1,4 @@
+## LP site copying
 This project is a clone of a modern landing page designed using HTML, CSS, and JavaScript. The goal is to practice layout techniques and JavaScript interactions.
 
 - Responsive design
