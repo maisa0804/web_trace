@@ -10,11 +10,39 @@ const salesContainer = document.getElementById("sales");
 
 const categoryTemplate = document.getElementById("category-template").content;
 
+const calcSalesPrice = (price) => {
+  const priceNumber = Number(price.replace(/,/g, '')) * 0.7; 
+  return priceNumber.toString()
+};
+
 const createProductCard = (img, title, price) => {
   const card = productCardTemplate.cloneNode(true);
-  card.querySelector(".product-image").src = img;
-  card.querySelector(".product-title").textContent = title;
-  card.querySelector(".product-price").textContent = price;
+  const imageElement = card.querySelector(".product-image");
+  const titleElement = card.querySelector(".product-title");
+  const priceElement = card.querySelector(".product-price");
+  const container = card.querySelector(".image-container");
+
+  imageElement.src = img;
+  titleElement.textContent = title;
+  
+  if(img.includes("sales")) {
+    priceElement.textContent = calcSalesPrice(price); 
+  }
+  priceElement.textContent = price
+
+
+
+  if (img.includes("sales")) {
+    if (container) {
+      container.classList.add("sales-image");
+      priceElement.classList.add("sale-price");
+
+      const discountedPriceSpan = document.createElement("span");
+      discountedPriceSpan.textContent = `¥${price}(税込)`;
+      discountedPriceSpan.classList.add("original-price");
+      priceElement.appendChild(discountedPriceSpan);
+    }
+  }
 
   return card;
 };
@@ -38,7 +66,6 @@ const createCategory = (categoryTitle, categoryId) => {
   category.querySelector(".category-title").textContent = categoryTitle;
   category.querySelector("#category-container").id = categoryId;
 
-  console.log(categoryTitle);
   if (categoryTitle.startsWith("Sale")) {
     salesContainer.appendChild(category);
   }

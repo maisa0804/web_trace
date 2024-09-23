@@ -1,7 +1,6 @@
 #style-mag {
   width: 100%;
   padding: 4.3rem 0 3.5rem;
-
 }
 
 .style-mag-title {
@@ -84,6 +83,36 @@
   aspect-ratio: 1;
 }
 
+.style-mag-buttons {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 5.7rem;
+  gap: 2.5rem;
+}
+
+.style-mag-button {
+  width: 258px;
+  height: 68px;
+  border-radius: 50px;
+  border: solid 1px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.style-mag-button:hover {
+  background-color: #000;
+}
+
+.style-mag-button:hover p {
+  color:#fff;
+}
+
+
 @media (min-width: 678px) and (max-width: 900px) {
   .style-mag-list {
     width: 100%;
@@ -91,6 +120,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: .5rem;
   }
+
+  .style-mag-buttons {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 1.5rem;
+    grid-template-rows: repeat(2 , 1fr);
+    padding: 4.3rem 0 3.5rem 0;
+  }
+
 }
 
 @media (min-width: 900px) and (max-width: 1122px) {
@@ -139,14 +178,18 @@
     left: 25%;
   }
 
+  #style-mag {
+    padding: 7.3rem 0 10.8rem 0;
+  }
+
   .style-mag-title .description {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
     padding-left: 5rem;
-    white-space: normal; /* テキストを折り返す */
-    word-wrap: break-word; /* 必要に応じて単語を折り返す */
+    white-space: normal; 
+    word-wrap: break-word;
     width: 55%;
   }
 }

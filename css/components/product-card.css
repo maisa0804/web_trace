@@ -8,12 +8,15 @@
 
 #product-card-container .image-container {
   position: relative;
+  width: 100%;
+  height: auto;
 }
 
 #product-card-container img {
   object-fit: cover;
   width: 100%;
   height: auto;
+  object-position: center;
 }
 
 #product-card-container span {
@@ -55,4 +58,51 @@
   font-size: 0.9rem;
   font-weight: 300;
   color: gray;
+}
+
+.sales-image {
+  position: relative;
+}
+
+.sales-image::after {
+  content: "SALE";
+  width: 4rem;
+  height: 2.4rem;
+  background-color: red;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: inline-block;
+  line-height: 2.4rem;
+  text-align: center;
+}
+
+.product-price.sale-price {
+  color: red;
+  position: relative;
+  display: inline-block;
+}
+
+.product-price.sale-price::after {
+  content: " (税込)";
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: red;
+}
+
+.original-price {
+  padding: 0 !important;
+  margin: 0;
+  font-weight: 300;
+  min-width: 7rem;
+  display: inline-block;
+  color: black;
+  position: absolute;
+  font-size: 0.6em;
+  position: absolute;
+  top: 0.5rem;
+  left: 8rem;
+  text-decoration: line-through;
+  background-color: transparent;
 }
