@@ -20,6 +20,36 @@
   margin: 0.5rem 0;
 }
 
+.rank-number {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3rem;
+  font-weight: thin;
+  font-size: 11px; 
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: #fff;
+}
+
+.rank-1 {
+  background-color:#cbb94e ;
+  color: #fff;
+}
+
+.rank-2 {
+  background-color:#a4a5ab ;
+  color: #fff;
+}
+
+.rank-3 {
+  background-color: #be8d5b;
+  color: #fff;
+}
+
 .ranking-price {
   font-size: 1.3rem;
   font-weight: 600;

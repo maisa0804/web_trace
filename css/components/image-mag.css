@@ -120,6 +120,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: .5rem;
   }
+
+  .style-mag-buttons {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    row-gap: 1.5rem;
+    grid-template-rows: repeat(2 , 1fr);
+    padding: 4.3rem 0 3.5rem 0;
+  }
+
 }
 
 @media (min-width: 900px) and (max-width: 1122px) {
