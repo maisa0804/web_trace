@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/components/ranking-card.css" />
     <link rel="stylesheet" href="css/sections/instagram.css" />
     <link rel="stylesheet" href="css/sections/footer.css" />
+    <link rel="stylesheet" href="css/components/image-mag.css" />
   </head>
   <body>
     <!-- Header -->
@@ -41,7 +42,7 @@
         </p>
       </div>
       <nav>
-        <div class="nav-container">
+        <div class="nav-container" id="nav-container">
           <div class="right">
             <img
               src="./assets/images/logo.png"
@@ -225,6 +226,15 @@
           <p class="description"></p>
         </div>
       </template>
+      <!-- Style mag post template -->
+      <template id="style-mag-template">
+        <div class="style-mag-img-container">
+          <img src="" alt="image-mag" class="style-mag-image"/>
+          <div class="image-layer">
+            <p class="style-mag-text"></p>
+          </div>
+        </div> 
+      </template>
 
       <section id="categories"></section>
       <section id="ranking">
@@ -252,7 +262,21 @@
         </div>
         <div id="instagram-articles"></div>
       </section>
-      <section></section>
+
+      <section id="style-mag">
+        <div class="style-mag-title">
+          <span class="accent"></span>
+          <h2>Style mag</h2>
+          <p class="sub">Instagram</p>
+          <img src="./assets/images/instamag-logo.png" alt="instamag logo">
+          <p class="description">cocaのアイテムを使った素敵なコーディネートや、スタッフ一押しアイテムをご紹介。毎日のコーデのヒントが見つかるかも!</p>
+        </div>
+        <div class="style-mag-list" id="style-mag-list"></div>
+        <div class="style-mag-buttons">
+          <div class="style-mag-button"><p>画像一覧を見る</p></div>
+          <div class="style-mag-button"><p>coca公式インスタグラム</p></div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -261,7 +285,7 @@
         <select name="language" id="language">
           <option value="cny">CNY ￥</option>
           <option value="hkd">HKD $</option>
-          <option value="jpy">JPY ￥</option>
+          <option value="jpy" selected>JPY ￥</option>
           <option value="MOP">MOP P</option>
           <option value="thb">THB ฿</option>
           <option value="twd">TWD $</option>
@@ -303,14 +327,14 @@
           <div class="footer-credit">
             <p>COPYRIGHT ADAPT RETAILING CO., LTD. ALL RIGHTS RESERVED.</p>
             <ul class="credit-list">
-              <li>Amazon</li>
-              <li>Amex</li>
-              <li>Apple</li>
-              <li>Google</li>
-              <li>JCB</li>
-              <li>Master Card</li>
-              <li>Paypal</li>
-              <li>Visa</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              
             </ul>
           </div>
         </div>
@@ -323,6 +347,7 @@
     <script type="module" src="js/components/product-card.js"></script>
     <script type="module" src="js/components/ranking-card.js"></script>
     <script type="module" src="js/components/instagram-card.js"></script>
+    <script type="module" src="js/components/style-mag.js"></script>
 
     <script type="module" src="js/static/product_women_data.js"></script>
     <script type="module" src="js/static/product_kids_data.js"></script>
@@ -331,5 +356,6 @@
     <script type="module" src="js/static/ranking_data.js"></script>
     <script type="module" src="js/static/sales_data.js"></script>
     <script type="module" src="js/static/instagram_data.js"></script>
+    <script type="module" src="js/static/styleMag_data.js"></script>
   </body>
 </html>
